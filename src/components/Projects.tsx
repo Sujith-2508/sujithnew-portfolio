@@ -1,25 +1,23 @@
 
 import React from 'react';
-import { ExternalLink, Github, Eye, Heart, Music, FileText } from 'lucide-react';
+import { Github, Eye, Heart, Music, FileText } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
       title: 'Third Eye - Emotion Recognition System',
-      description: 'Real-time emotion and engagement recognition system for online learning environments. Uses CNN for emotion recognition and OpenCV for face tracking with instant feedback for educators.',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500&h=300&fit=crop',
-      tech: ['Python', 'OpenCV', 'TensorFlow', 'CNN'],
+      description: 'A real-time emotion and engagement recognition system for online learning environments. Leverages deep learning techniques and computer vision to detect faces, classify emotions, and assess participant engagement. Built with Convolutional Neural Networks (CNN) for emotion recognition and OpenCV for face and eye tracking.',
+      image: '/lovable-uploads/8e05b7b2-fc1a-4674-81c6-391738fb0dfc.png',
+      tech: ['Python', 'OpenCV', 'TensorFlow', 'CNN', 'Computer Vision'],
       github: 'https://github.com/Sujith-2508/thirdeye',
-      demo: '#',
       icon: <Eye className="w-6 h-6" />
     },
     {
       title: 'Ischaemic Heart Disease Detection',
-      description: 'AI-based system for early detection of Ischaemic Heart Disease using Machine Learning. Features Python backend with HTML/CSS frontend and leverages medical datasets for accurate predictions.',
+      description: 'AI-based system for early detection of Ischaemic Heart Disease using Machine Learning techniques. Implements Extreme Gradient Boosting (XGBoost) for analyzing patient medical records with a Python backend for data processing and API integration, and HTML/CSS frontend for user interaction.',
       image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop',
-      tech: ['Python', 'Machine Learning', 'HTML', 'CSS'],
+      tech: ['Python', 'XGBoost', 'Machine Learning', 'HTML', 'CSS'],
       github: 'https://github.com/Sujith-2508/Ischaemic-Heart-Disease-Detection',
-      demo: '#',
       icon: <Heart className="w-6 h-6" />
     },
     {
@@ -28,16 +26,14 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop',
       tech: ['Python', 'NLP', 'Machine Learning', 'Text Processing'],
       github: 'https://github.com/Sujith-2508/news-summarizer',
-      demo: '#',
       icon: <FileText className="w-6 h-6" />
     },
     {
-      title: 'SoundFX - Audio Processing',
-      description: 'Advanced audio processing and effects system that applies various sound effects and transformations. Built with focus on real-time audio manipulation and user-friendly interface.',
+      title: 'SoundFX - AI Sound Generation',
+      description: 'Developed an innovative sound generation tool using Generative Adversarial Networks (GANs) to transform user-recorded voice inputs into customizable sound effects. Designed an intuitive interface that allows users to easily record, modify, and export unique audio experiences for applications in gaming, film, and music production.',
       image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=300&fit=crop',
-      tech: ['Python', 'Audio Processing', 'Signal Processing', 'UI/UX'],
+      tech: ['Python', 'GANs', 'Deep Learning', 'Signal Processing'],
       github: 'https://github.com/Sujith-2508/SoundFX',
-      demo: '#',
       icon: <Music className="w-6 h-6" />
     }
   ];
@@ -72,9 +68,6 @@ const Projects = () => {
                     <a href={project.github} className="text-white hover:text-purple-400 transition-colors">
                       <Github size={24} />
                     </a>
-                    <a href={project.demo} className="text-white hover:text-purple-400 transition-colors">
-                      <ExternalLink size={24} />
-                    </a>
                   </div>
                 </div>
                 <div className="absolute top-4 left-4 bg-purple-500/20 backdrop-blur-sm rounded-lg p-2">
@@ -101,48 +94,15 @@ const Projects = () => {
                 <div className="flex space-x-4">
                   <a 
                     href={project.github}
-                    className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
-                  >
-                    <Github size={18} />
-                    <span>Code</span>
-                  </a>
-                  <a 
-                    href={project.demo}
                     className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors"
                   >
-                    <ExternalLink size={18} />
-                    <span>Demo</span>
+                    <Github size={18} />
+                    <span>View Code</span>
                   </a>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-8 text-white">Achievements</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-purple-400 font-semibold mb-2">Skillrack</h4>
-              <p className="text-gray-300 text-sm">450+ Problems Solved</p>
-              <p className="text-gray-400 text-xs">Bronze Level</p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-purple-400 font-semibold mb-2">ML Poster</h4>
-              <p className="text-gray-300 text-sm">2nd Position</p>
-              <p className="text-gray-400 text-xs">ML Use Cases - 2024</p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-purple-400 font-semibold mb-2">Code Crafters</h4>
-              <p className="text-gray-300 text-sm">1st Position</p>
-              <p className="text-gray-400 text-xs">KPRIET HackerRank - 2024</p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-purple-400 font-semibold mb-2">Handball</h4>
-              <p className="text-gray-300 text-sm">District Level Player</p>
-              <p className="text-gray-400 text-xs">Sports Achievement - 2019</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

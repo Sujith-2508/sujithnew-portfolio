@@ -12,58 +12,39 @@ const About = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <h3 className="text-2xl font-semibold mb-6 text-white">
-              Hello! I'm Sujith Babu M, an AI & ML Enthusiast.
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center">
+            <h3 className="text-3xl font-semibold mb-8 text-white">
+              Who I Am
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              I'm a passionate AI & ML enthusiast currently pursuing B.Tech in AI&DS at 
-              Sri Eshwar College of Engineering. I specialize in building intelligent systems 
-              with Machine Learning and Deep Learning technologies.
+            <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+              I'm an AI & ML enthusiast with a passion for building intelligent systems 
+              that solve real-world problems. My focus is on developing machine learning 
+              models and deep learning applications that transform raw data into valuable 
+              insights and automated solutions.
             </p>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              My journey in artificial intelligence started with a fascination for how machines 
-              can learn and make decisions. I focus on transforming data into AI-powered solutions 
-              that solve real-world problems, from emotion recognition to medical diagnosis.
-            </p>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              When I'm not training models or analyzing data, you can find me exploring new 
-              AI research papers, contributing to open-source projects, or participating in 
-              competitive programming challenges.
+            <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+              I'm dedicated to pushing the boundaries of what's possible with artificial 
+              intelligence and robotics technologies.
             </p>
             
-            <div className="grid grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-purple-400 font-semibold mb-2">Name:</h4>
-                <p className="text-gray-300">Sujith Babu M</p>
-              </div>
-              <div>
-                <h4 className="text-purple-400 font-semibold mb-2">Field:</h4>
-                <p className="text-gray-300">AI & ML</p>
-              </div>
-              <div>
-                <h4 className="text-purple-400 font-semibold mb-2">Education:</h4>
-                <p className="text-gray-300">B.Tech AI&DS</p>
-              </div>
-              <div>
-                <h4 className="text-purple-400 font-semibold mb-2">CGPA:</h4>
-                <p className="text-gray-300">7.05</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 p-1">
-                <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/a719598c-142b-4d79-99e5-54c5b5a71dbb.png" 
-                    alt="Sujith Babu M"
-                    className="w-72 h-72 rounded-full object-cover"
-                  />
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="https://github.com/Sujithbabu-m"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border-2 border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+              >
+                GitHub
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/sujithbabu2508/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>

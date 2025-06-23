@@ -21,12 +21,8 @@ const Hero = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const openGithub = () => {
-    window.open('https://github.com/Sujithbabu-m', '_blank');
-  };
-
-  const openLinkedin = () => {
-    window.open('https://www.linkedin.com/in/sujithbabu2508/', '_blank');
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -38,45 +34,57 @@ const Hero = () => {
         <div className="absolute -bottom-8 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
       </div>
 
-      <div className="text-center px-4 relative z-10">
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
-            Sujith Babu M
-          </h1>
-          <div className="text-xl md:text-2xl text-gray-300 h-16 mb-4">
-            {displayText}
-            <span className="animate-pulse">|</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content - Left Side */}
+          <div className="order-2 lg:order-1">
+            <div className="mb-8">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
+                Sujith Babu M
+              </h1>
+              <div className="text-xl md:text-2xl text-gray-300 h-16 mb-4">
+                {displayText}
+                <span className="animate-pulse">|</span>
+              </div>
+              <p className="text-lg text-purple-400 font-semibold">
+                Transforming data into AI-powered solutions
+              </p>
+            </div>
+            
+            <p className="text-lg text-gray-400 mb-8 animate-fade-in">
+              Building intelligent systems with Machine Learning and Deep Learning. 
+              Passionate about computer vision, neural networks, and creating AI solutions that make a difference.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
+              <button 
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                View My Projects
+              </button>
+              <button 
+                onClick={scrollToContact}
+                className="px-8 py-3 border-2 border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+              >
+                Contact Me
+              </button>
+            </div>
           </div>
-          <p className="text-lg text-purple-400 font-semibold">
-            Transforming data into AI-powered solutions
-          </p>
-        </div>
-        
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8 animate-fade-in">
-          Building intelligent systems with Machine Learning and Deep Learning. 
-          Passionate about computer vision, neural networks, and creating AI solutions that make a difference.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-          <button 
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-          >
-            View My Projects
-          </button>
-          <div className="flex gap-2">
-            <button 
-              onClick={openGithub}
-              className="px-6 py-3 border-2 border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
-            >
-              GitHub
-            </button>
-            <button 
-              onClick={openLinkedin}
-              className="px-6 py-3 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-            >
-              LinkedIn
-            </button>
+          
+          {/* Profile Photo - Right Side */}
+          <div className="order-1 lg:order-2 flex justify-center">
+            <div className="relative">
+              <div className="w-80 h-96 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 p-1 shadow-2xl">
+                <div className="w-full h-full rounded-2xl bg-gray-800 flex items-end justify-center overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/ce17cf49-220e-4943-8daf-54c2961ce496.png" 
+                    alt="Sujith Babu M"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         

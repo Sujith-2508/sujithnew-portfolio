@@ -15,39 +15,40 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h3 className="text-2xl font-semibold mb-6 text-white">
-              Hello! I'm John Doe, a passionate Full Stack Developer.
+              Hello! I'm Sujith Babu M, an AI & ML Enthusiast.
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              I'm a dedicated full-stack developer with 5+ years of experience in creating 
-              robust web applications. I specialize in modern JavaScript frameworks and 
-              have a passion for clean, efficient code.
+              I'm a passionate AI & ML enthusiast currently pursuing B.Tech in AI&DS at 
+              Sri Eshwar College of Engineering. I specialize in building intelligent systems 
+              with Machine Learning and Deep Learning technologies.
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              My journey in web development started with a curiosity about how websites work, 
-              and it has evolved into a career where I get to solve complex problems and 
-              build amazing digital experiences.
+              My journey in artificial intelligence started with a fascination for how machines 
+              can learn and make decisions. I focus on transforming data into AI-powered solutions 
+              that solve real-world problems, from emotion recognition to medical diagnosis.
             </p>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing 
-              to open-source projects, or enjoying a good book with a cup of coffee.
+              When I'm not training models or analyzing data, you can find me exploring new 
+              AI research papers, contributing to open-source projects, or participating in 
+              competitive programming challenges.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h4 className="text-purple-400 font-semibold mb-2">Name:</h4>
-                <p className="text-gray-300">John Doe</p>
+                <p className="text-gray-300">Sujith Babu M</p>
               </div>
               <div>
-                <h4 className="text-purple-400 font-semibold mb-2">Experience:</h4>
-                <p className="text-gray-300">5+ Years</p>
+                <h4 className="text-purple-400 font-semibold mb-2">Field:</h4>
+                <p className="text-gray-300">AI & ML</p>
               </div>
               <div>
-                <h4 className="text-purple-400 font-semibold mb-2">Location:</h4>
-                <p className="text-gray-300">New York, USA</p>
+                <h4 className="text-purple-400 font-semibold mb-2">Education:</h4>
+                <p className="text-gray-300">B.Tech AI&DS</p>
               </div>
               <div>
-                <h4 className="text-purple-400 font-semibold mb-2">Email:</h4>
-                <p className="text-gray-300">john@example.com</p>
+                <h4 className="text-purple-400 font-semibold mb-2">CGPA:</h4>
+                <p className="text-gray-300">7.05</p>
               </div>
             </div>
           </div>
@@ -55,10 +56,12 @@ const About = () => {
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative">
               <div className="w-80 h-80 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 p-1">
-                <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
-                  <div className="w-72 h-72 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center text-6xl font-bold text-white">
-                    JD
-                  </div>
+                <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/a719598c-142b-4d79-99e5-54c5b5a71dbb.png" 
+                    alt="Sujith Babu M"
+                    className="w-72 h-72 rounded-full object-cover"
+                  />
                 </div>
               </div>
             </div>

@@ -6,32 +6,19 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Navigation from '../components/Navigation';
-import { ThemeProvider, useTheme } from '../contexts/ThemeContext';
+import Footer from '../components/Footer';
 
-const AppContent = () => {
-  const { theme } = useTheme();
-  
+const Index = () => {
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      theme === 'dark' 
-        ? 'bg-gray-900 text-white' 
-        : 'bg-white text-gray-900'
-    }`}>
+    <div className="min-h-screen bg-gray-900 text-white">
       <Navigation />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </div>
-  );
-};
-
-const Index = () => {
-  return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
   );
 };
 

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -60,28 +60,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="mt-8">
-              <h4 className="text-white font-medium mb-4">Connect With Me</h4>
-              <div className="flex space-x-4">
-                <a 
-                  href="https://github.com/Sujithbabu-m" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-500 transition-colors group"
-                >
-                  <Github size={20} className="text-gray-400 group-hover:text-white" />
-                </a>
-                <a 
-                  href="https://www.linkedin.com/in/sujithbabu2508/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors group"
-                >
-                  <Linkedin size={20} className="text-gray-400 group-hover:text-white" />
-                </a>
-              </div>
-            </div>
           </div>
           
           <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
@@ -135,12 +113,6 @@ const Contact = () => {
               </button>
             </form>
           </div>
-        </div>
-        
-        <div className="mt-16 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-400">
-            © 2024 Sujith Babu M. All rights reserved. Built with passion for AI & ML.
-          </p>
         </div>
       </div>
     </section>

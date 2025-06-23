@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const fullText = "AI & ML Enthusiast Building intelligent systems";
+  const fullText = "AI & ML Enthusiast";
 
   useEffect(() => {
     if (currentIndex < fullText.length) {
@@ -27,6 +27,17 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      {/* Profile Photo - Left Corner */}
+      <div className="absolute top-8 left-8 z-20">
+        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-purple-500 shadow-lg">
+          <img 
+            src="/lovable-uploads/ce17cf49-220e-4943-8daf-54c2961ce496.png" 
+            alt="Sujith Babu M"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
       {/* AI/ML Background Animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -52,7 +63,6 @@ const Hero = () => {
             </div>
             
             <p className="text-lg text-gray-400 mb-8 animate-fade-in">
-              Building intelligent systems with Machine Learning and Deep Learning. 
               Passionate about computer vision, neural networks, and creating AI solutions that make a difference.
             </p>
             

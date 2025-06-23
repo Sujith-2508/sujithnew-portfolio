@@ -1,7 +1,21 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const About = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const fullText = "I'm an AI & ML enthusiast with a passion for building intelligent systems that solve real-world problems. My focus is on developing machine learning models and deep learning applications that transform raw data into valuable insights and automated solutions. I'm dedicated to pushing the boundaries of what's possible with artificial intelligence and robotics technologies.";
+
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + fullText[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 30);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText]);
+
   return (
     <section id="about" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,16 +31,10 @@ const About = () => {
             <h3 className="text-3xl font-semibold mb-8 text-white">
               Who I Am
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-              I'm an AI & ML enthusiast with a passion for building intelligent systems 
-              that solve real-world problems. My focus is on developing machine learning 
-              models and deep learning applications that transform raw data into valuable 
-              insights and automated solutions.
-            </p>
-            <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-              I'm dedicated to pushing the boundaries of what's possible with artificial 
-              intelligence and robotics technologies.
-            </p>
+            <div className="text-gray-300 mb-8 leading-relaxed text-lg min-h-[200px]">
+              {displayText}
+              <span className="animate-pulse">|</span>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 

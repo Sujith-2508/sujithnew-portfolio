@@ -75,7 +75,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/lovable-uploads/new-profile.png" 
+                  src="/lovable-uploads/00da4148-6d2a-41a2-a042-d069a9492e6a.png" 
                   alt="Sujith Babu M"
                   className="w-full h-full object-cover"
                 />

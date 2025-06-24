@@ -42,32 +42,28 @@ const Hero = () => {
           {/* Content - Left Side */}
           <div className="order-2 lg:order-1">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-fade-in leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white leading-tight">
                 Sujith Babu M
               </h1>
-              <div className="text-xl md:text-2xl text-gray-300 h-16 mb-4">
+              <div className="text-xl md:text-2xl text-blue-400 font-semibold h-16 mb-6">
                 {displayText}
                 {!isTypingComplete && <span className="animate-pulse">|</span>}
               </div>
-              <p className="text-lg text-purple-400 font-semibold">
-                Transforming data into AI-powered solutions
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                Transforming data into AI-powered solutions. Building intelligent systems with Machine Learning and Deep Learning.
               </p>
             </div>
-            
-            <p className="text-lg text-gray-400 mb-8 animate-fade-in">
-              Passionate about computer vision, neural networks, and creating AI solutions that make a difference.
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
               <button 
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
-                View My Projects
+                View Projects
               </button>
               <button 
                 onClick={scrollToContact}
-                className="px-8 py-3 border-2 border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+                className="px-8 py-3 border-2 border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-300 font-semibold"
               >
                 Contact Me
               </button>
@@ -75,16 +71,14 @@ const Hero = () => {
           </div>
           
           {/* Profile Photo - Right Side */}
-          <div className="order-1 lg:order-2 flex justify-center">
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-96 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 p-1 shadow-2xl">
-                <div className="w-full h-full rounded-2xl bg-gray-800 flex items-end justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/ce17cf49-220e-4943-8daf-54c2961ce496.png" 
-                    alt="Sujith Babu M"
-                    className="w-full h-full object-cover rounded-2xl"
-                  />
-                </div>
+              <div className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/lovable-uploads/56835657-22d9-436d-9d5e-1dd269f4e220.png" 
+                  alt="Sujith Babu M"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

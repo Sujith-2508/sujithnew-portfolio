@@ -5,6 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = "AI & ML Enthusiast";
 
   useEffect(() => {
@@ -14,6 +15,8 @@ const Hero = () => {
         setCurrentIndex(prev => prev + 1);
       }, 100);
       return () => clearTimeout(timeout);
+    } else {
+      setIsTypingComplete(true);
     }
   }, [currentIndex, fullText]);
 
@@ -27,17 +30,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-      {/* Profile Photo - Left Corner */}
-      <div className="absolute top-8 left-8 z-20">
-        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-purple-500 shadow-lg">
-          <img 
-            src="/lovable-uploads/ce17cf49-220e-4943-8daf-54c2961ce496.png" 
-            alt="Sujith Babu M"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
       {/* AI/ML Background Animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -50,12 +42,12 @@ const Hero = () => {
           {/* Content - Left Side */}
           <div className="order-2 lg:order-1">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-fade-in leading-tight">
                 Sujith Babu M
               </h1>
               <div className="text-xl md:text-2xl text-gray-300 h-16 mb-4">
                 {displayText}
-                <span className="animate-pulse">|</span>
+                {!isTypingComplete && <span className="animate-pulse">|</span>}
               </div>
               <p className="text-lg text-purple-400 font-semibold">
                 Transforming data into AI-powered solutions

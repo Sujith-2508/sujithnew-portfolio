@@ -4,7 +4,8 @@ import React, { useState, useEffect } from 'react';
 const About = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const fullText = "I'm an AI & ML enthusiast with a passion for building intelligent systems that solve real-world problems. My focus is on developing machine learning models and deep learning applications that transform raw data into valuable insights and automated solutions. I'm dedicated to pushing the boundaries of what's possible with artificial intelligence and robotics technologies.";
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const fullText = "I'm an AI & ML enthusiast with a passion for solving real-world problems. My focus is on developing machine learning models and deep learning applications that transform raw data into valuable insights and automated solutions. I'm dedicated to pushing the boundaries of what's possible with artificial intelligence and robotics technologies.";
 
   useEffect(() => {
     if (currentIndex < fullText.length) {
@@ -13,6 +14,8 @@ const About = () => {
         setCurrentIndex(prev => prev + 1);
       }, 30);
       return () => clearTimeout(timeout);
+    } else {
+      setIsTypingComplete(true);
     }
   }, [currentIndex, fullText]);
 
@@ -33,7 +36,7 @@ const About = () => {
             </h3>
             <div className="text-gray-300 mb-8 leading-relaxed text-lg min-h-[200px]">
               {displayText}
-              <span className="animate-pulse">|</span>
+              {!isTypingComplete && <span className="animate-pulse">|</span>}
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
